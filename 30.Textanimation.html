@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test animation using css</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        font-size: 40px;
+        font-family: "Lora", serif;
+        text-align: center;
+        font-weight: bolder;
+        animation-iteration-count: 1;
+        animation-delay: 1s;
+        animation-duration: 4s;
+       animation-fill-mode:backwards;
+      }
+      #cont1 {
+        animation-name: appear;
+      }
+      #cont2 {
+        animation-name: appear2;
+      }
+      #cont3 {
+        animation-name: appear;
+      }
+      #cont4 {
+        animation-name: appear;
+      }
+      @keyframes appear {
+        from {
+          opacity: 0%;
+        }
+        to {
+          opacity: 100%;
+        }
+      }
+      @keyframes appear2 {
+        from {
+          opacity: 0%;
+          color: green;
+        }
+        to {
+          color: blueviolet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont1" class="container">
+      Foodie Heaven: Indulge in Irresistible Culinary Creations
+    </div>
+    <div id="cont2" class="container">
+      Foodie Heaven: Indulge in Irresistible Culinary Creations
+    </div>
+    <div id="cont3" class="container">
+      Foodie Heaven: Indulge in Irresistible Culinary Creations
+    </div>
+    <div id="cont3" class="container">
+      Foodie Heaven: Indulge in Irresistible Culinary Creations
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   body{
+    
+    background-color: black;}
+    .cube{
+      
+      transform-style: preserve-3d;
+      position: absolute;
+      animation: rotate 6s linear infinite;
+      padding: 400px;
+      transform: rotateX(10deg) rotateY(20deg);
+    }
+  .faces{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    /* border: 1px solid black; */
+    background:linear-gradient(rgb(255, 59, 59),
+    rgb(75, 62, 62));
+    text-align: center;
+    
+  }
+  .front{
+    transform: translateZ(50px);
+  }
+  .back{
+    transform: translateZ(-50px);
+  }
+  .right{
+    transform:rotateY(90deg) translateZ(50px);
+  }
+  .left{
+    transform:rotateY(-90deg) translateZ(50px);
+  }
+  .bottom{
+    transform:rotateX(90deg) translateZ(50px);
+  } 
+  .shadow{
+    transform:rotateX(90deg) translateZ(100px);
+    filter: blur(10px);
+  }
+  .top{
+    transform:rotateX(-90deg) translateZ(50px);
+  }
+  @keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg); /* Starting rotation angles */
+  }
+  to {
+    transform:rotateX(360deg) rotateY(360deg); /* Ending rotation angles */
+  }
+}
+  </style>
+</head>
+<body>
+<div class="cube">
+  <div class="faces front"></div>
+  <div class="faces back"></div>
+  <div class="faces right"></div>
+  <div class="faces left"></div>
+  <div class="faces top"></div>
+  <div class="faces bottom"></div>
+  <div class="faces shadow"></div>
+</div>
+<div class="cube">
+  <div class="faces front"></div>
+  <div class="faces back"></div>
+  <div class="faces right"></div>
+  <div class="faces left"></div>
+  <div class="faces top"></div>
+  <div class="faces bottom"></div>
+  <div class="faces shadow"></div>
+</div>
+</body>
+</html>

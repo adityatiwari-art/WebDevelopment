@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow</title>
+    <style>
+      body{
+        background-color: black;
+      }
+      .container{
+        border: 2px solid black;
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 4px 10px rgb(221, 255, 0);
+        box-shadow: 4px 10px 23px rgb(221, 255, 0); /*third is spread*/
+        box-shadow:11px 10px 0px -7px rgb(221, 255, 0);/*initial 2 are  for positioning of shadow in x and y axis third is spread and forth is thickness*/
+        box-shadow:11px 10px 0px -7px rgb(221, 255, 0) ;
+        box-shadow:inset 11px 10px 0px -7px rgb(221, 255, 0) ;/*shadow is above in inset */
+        /* box-shadow:-11px -10px 0px -7px rgb(221, 255, 0) ;negative for upper and left */
+        background-color: rgb(11, 11, 65);
+        color: white;
+        font-weight: bold;
+      }
+      header{
+        display: flex;
+      }
+      p{
+        text-shadow: 2px 2px 10px yellow;/*only 3 exist here*/
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+    <div class="container">
+      <h2>this is a para</h2>
+      <p>
+        this is a Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Recusandae, illum ipsam. Excepturi quidem quod aspernatur voluptatum
+        atque debitis laborum similique, minima consequatur suscipit itaque iste
+        eaque repudiandae illo totam sapiente?
+      </p>
+    </div>
+    <div class="container">
+      <h2>this is a para</h2>
+      <p>
+        this is a Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Recusandae, illum ipsam. Excepturi quidem quod aspernatur voluptatum
+        atque debitis laborum similique, minima consequatur suscipit itaque iste
+        eaque repudiandae illo totam sapiente?
+      </p>
+    </div></header>
+  </body>
+</html>

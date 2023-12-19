@@ -1,0 +1,36 @@
+<!-- in CSS, pseudo-elements allow you to style specific parts of an element without adding extra markup to your HTML. The ::before and ::after pseudo-elements are used to insert content before and after the content of an element, respectively. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>before and after pseudo elements in css</title>
+  <style>
+    p::after{   /*before and after are not outside the specified element it is in it before means first child and after last child of that element here it is p but we cant use before and after with img tag. content enters text .
+      there can be only one before and after*/
+      content: "world";
+      color: white;
+      background-color: red;
+      display: block;
+    }
+    p::before{
+      content: "Hello";   /*not  A PART OF MARKUP*/
+      color: white;
+      background-color: rgb(0, 255, 42);
+      display: block;
+    }
+    p{
+      border: 4px solid black;
+    }
+    p:hover::after{
+      content: "hovered";
+      display: block;
+      font-weight: bold;
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <p>this is a paragraph</p>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nth child pseudo selectors and target selectors in css</title>
+  <style>
+  .container{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  border: 2px solid red;
+
+  }
+  .container input[type='text']  /*if type is text*/
+{
+  color: pink;
+  font-weight: bold;
+}
+a[target]  /*if target exists*/
+{
+  color: red;
+  background-color: black;
+}
+ul:nth-child(4)  /*any item order*/
+{
+  color: cyan;
+}
+
+ul :nth-child(odd)
+{
+  color: red;
+}
+ul :nth-child(even)
+{
+  background-color:yellow;
+}
+
+ul :nth-child(5n-3)/*any formula*/
+{
+  text-decoration: underline;
+}
+ul:first-child{
+  background-color: cyan;
+}
+  </style>
+</head>
+<body>
+  <h1>this is heading</h1>
+  <div class="container">
+    <a href="http:\\google.com" target="_blank">Go to google</a>
+    <input type="text" placeholder="enter name">
+    <input type="text" placeholder="enter age">
+    <input type="email" placeholder="enter email">
+    Male:<input  id="rb1" name="gender" type="radio" value="m" >
+    Female:<input id="rb2" name="gender" type="radio" value="f">
+    <ul>
+   <li id="item1">item1</li>
+   <li id="item2">item2</li>
+   <li id="item3">item3</li>
+   <li id="item4">item4</li>
+   <li id="item5">item5</li>
+   <li id="item6">item6</li>
+   <li id="item7">item7</li>
+    </ul>
+  </div>  
+</body>
+</html>

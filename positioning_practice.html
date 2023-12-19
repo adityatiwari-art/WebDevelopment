@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .container{
+      margin: 100px;
+      background-color: black;
+      width: 600px;
+      height:300px;
+      padding: 10px;
+      position: relative;
+
+    }
+    .orange{
+    position: absolute;
+    top: 400px;
+    /* right:100px; 100px from the right to left */
+
+    background-color: orange;
+    width:600px;
+    height:100px;
+    
+    }
+    .white{
+     /* position:absolute;  if /*no top bottom lr are specified then removed */
+    /* top: 50px;
+    left: 50px; */ 
+    background-color:white;
+    width:600px;
+    height:100px;
+    position: sticky;
+    top: 100px;
+    }
+    .green{
+   
+    position: fixed;
+    /* top: 0px;
+    left: 0px; */
+    background-color:green;
+    width:600px;
+    height:100px;
+    }
+    .spacer{
+      height: 300vh;  /*to set view scroll bar*/
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box orange "></div>
+    <div class="box white "></div>
+    <div class="box green"></div>
+  </div>
+  <div class="spacer"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MORE ON CSS SELECTORS</title>
+    <style>
+      div + p {
+        /*div + p selector is a sibling combinator selector that targets the <p> element that immediately follows a <div> element means just after </div> and not that is inside div*/
+        color: pink;
+      }
+      /* div>p{
+        color: orange; /* this is when the p is just inside the div tag*/
+      /* } */ 
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div>
+          <div><p>this is inner para</p></div>
+        </div>
+        <p>this in 2nd inner para</p>
+      </div>
+      <p>this is example para</p>
+    </div>
+    <p>this is outer paragraph</p>
+  </body>
+</html>

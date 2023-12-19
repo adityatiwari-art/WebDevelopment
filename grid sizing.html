@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid sizing</title>
+  <style>
+  .container{
+    border:1px solid black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,calc(33.33% - 5px));
+    /* grid-template-columns: repeat(auto-fit,minmax(calc(33% - 5px),1fr)); */
+    /* grid-template-columns: repeat(3,minmax(min-content,500px)); */
+    /* grid-template-columns: repeat(3,min-content); */
+    /* grid-template-columns: repeat(3,max-content); */
+    grid-template-rows: repeat(2,minmax(min-content,1fr));
+    width:100%;
+  }
+  .items{
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="items">item1</div>
+    <div class="items">item2</div>
+    <div class="items">item3</div>
+    <div class="items">item4</div>
+    <div class="items">item5</div>
+    <div class="items">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam illum itaque qui? Adipisci voluptas est illo dicta eius tempora numquam dolor, nihil sit quod ducimus non debitis, esse molestiae assumenda. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo aut ex adipisci quo illo soluta iusto aliquam optio asperiores consequuntur.</div>
+  </div>
+</body>
+</html>

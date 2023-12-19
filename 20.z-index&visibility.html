@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Z-index and visibility</title>
+    <style>
+      body{
+        margin: 0px;
+        padding: 0px;
+      }
+      .box {
+        height: 143px;
+        width: 143px;
+        border: 2px solid black;
+       
+      }
+      #box1 {
+        background-color: green;
+        position:relative;
+      
+      }
+      #box2 {
+        background-color: red;
+        position:relative;   /* relative moves wrt the initial position*/
+        top: 40px;
+        z-index: 7;
+      }
+      #box3 {
+        background-color: black;
+        position: relative;
+        z-index: 8;    /*z index requires position to be non static */
+      }
+      #box4 {
+        background-color: yellow;
+        display: none;
+        /* visibility: hidden; */
+      }
+      #box5 {
+        background-color: rgb(106, 0, 255);
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+    <div class="box" id="box5">5</div>
+  </body>
+</html>

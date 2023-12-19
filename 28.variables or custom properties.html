@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>variables or custom properties</title>
+  <style>
+    :root{
+      --bg_color: violet;/*in :root variables are like globally defined and can be used inside all slectors*/
+    }
+    .container{
+      border: 2px solid  black;
+      background-color:var(--bg_color);
+      text-align: center ;
+    }
+    #cont5{
+      --bg_color2:rgb(235, 235, 84);
+      background-color: var(--bg_color2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="cont1">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ab aspernatur unde illum quae enim.</p>
+  </div>
+  <div class="container" id="cont2">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ab aspernatur unde illum quae enim.</p>
+  </div>
+  <div class="container" id="cont3">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ab aspernatur unde illum quae enim.</p>
+  </div>
+  <div class="container" id="cont4">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ab aspernatur unde illum quae enim.</p>
+  </div>
+  <div class="container" id="cont5">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ab aspernatur unde illum quae enim.</p>
+  </div>
+</body>
+</html>

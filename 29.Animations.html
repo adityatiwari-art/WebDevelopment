@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation and keyframes</title>
+    <style>
+      .container {
+        height: 50vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      #cir1 {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 43%;
+        left: -17px;
+        background-color: black;
+        border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+        animation-name: xoom1;
+        animation-duration: 5s;
+        transform: rotate(135deg);/*++++++++++++++++++++++++++++++++++++++*/
+        animation-iteration-count: 1;
+        /* animation-iteration-count: infinite; */
+        animation-fill-mode:forwards;/*maintaines the change after animation otherwise by default it is backward*/
+        /* animation-direction: reverse; */
+        /*  shorthand for animation animation:name duration timing-function delay; */
+      }
+      @keyframes xoom1 {
+        from {
+          /*from defines beginning changes */
+          background-color: rgb(2, 247, 227);
+          /* transform: scale(0) rotate(135deg); */
+  
+        }
+        to {
+          background-color: rgb(253, 0, 194);
+          transform:rotate(495deg)  scale(2)  ;/*if scsle not specified it will come to 0 deg from 135 deg and there cant be two transform*/
+        }
+        from {
+          background-color: rgb(253, 0, 194);
+        }
+        to {
+          background-color: rgb(143, 0, 253);
+        }
+        from {
+          background-color: rgb(143, 0, 253);
+        }
+        to {
+          background-color: rgba(253, 110, 0, 0.845);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="cir1" class="circle"></div>
+
+    </div>
+  </body>
+</html>

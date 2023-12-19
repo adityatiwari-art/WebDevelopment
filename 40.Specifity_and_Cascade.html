@@ -1,0 +1,113 @@
+<!-- cascade algorithm is used to resolve css conflicts -->
+
+<!--1. if we have multiple css for a single element with different properties then which is chosen 
+if same type of selectors---then then one which is written below is applied -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .firstdiv{
+            background-color: yellow;
+            color: black;
+        }
+        .div1{ 
+            /*below so applied since same type of selector(class selectors)*/
+         background-color: black;
+         color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1 firstdiv" id="id1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, architecto ipsa! Quae error rerum architecto cum quas fuga assumenda modi.
+    </div>
+</body>
+</html> -->
+
+<!--2. if differnent type of selectors conflict then ---specifity algorithm
+inline css>id selector>class selector or attribute selectors>element selector>universal selector -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .firstdiv{
+            background-color: yellow;
+            color: black;
+        }
+        #id1{
+        /* id selector preferenced first then class and element selector and positioning doesnt matter*/
+        background-color: green;
+         color:black;
+        }
+        .div1{
+         background-color: black;
+         color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1 firstdiv" id="id1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, architecto ipsa! Quae error rerum architecto cum quas fuga assumenda modi.
+    </div>
+</body>
+</html> -->
+
+<!-- attribute selectors  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: yellow !important;
+            color: black;
+        }
+        [data-x=ab]{
+            background-color: magenta;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1 firstdiv" id="id1" data-x="ab">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, architecto ipsa! Quae error rerum architecto cum quas fuga assumenda modi.
+    </div>
+</body>
+</html>
+
+<!-- 3.origin--user agent style(provided by browser) sheets are override by user provided css -->
+<!-- 4.important--use !important to prioritize -->
+<!-- ex. div{
+    background-color:pink !important;
+} -->
+<!-- 
+for complex selectors to calculate ---specifity for external css--0 
+element css--1
+class/attribute css--10
+id --100
+inline--1000
+important=increase by 10000
+
+for complex selector add specivity value ex.div.red==1+10=11 
+and div#id11=1+100=101 so chosen  -->
+
+<!-- Q.find specificity of a.harry.rohan-class[href]:hover{ 1 for a 10 for harry 10 for roha class 10 for attribute selector 10 for pseudo class
+    color:red;
+}
+1+10+10+10+10=31 -->
+
+<!-- [href]==means that that having attribute slector href 
+[data-x=a]==means that have attribute selector with value a -->

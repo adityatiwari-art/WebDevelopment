@@ -1,0 +1,72 @@
+<!-- step one to create a website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media query in Grid</title>
+  <style>
+  .container{
+    display: grid;
+    grid-template-areas: 'nav nav nav nav'
+                          'section section aside aside' 
+                          'footer footer footer footer';
+    grid-gap: 10px;
+  }
+  @media only screen and (max-width:425px){
+  body{
+    background-color: red;
+  }
+  .container{
+   
+    grid-template-areas: 'nav nav nav nav'
+                        'section section section section '
+                        'aside aside aside aside' 
+                        'footer footer footer footer';
+  
+  }
+  span{
+    display: block;
+  }
+  }
+  .border{
+    border: 2px solid black;
+    padding: 10px;
+  }
+  nav{
+  grid-area: nav;
+  }
+  section{
+  grid-area: section;
+  height: 400px;
+  position: relative;
+  overflow:scroll;
+  
+  }
+  aside{
+  grid-area: aside;
+  }
+  footer{
+  grid-area: footer;
+  text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="border" id="navbar">
+      <span>Home</span>
+      <span>About us</span>
+      <span>Contact Us</span>
+      <span>More</span>
+    </nav>
+    <section class="border">
+    </section>
+    <aside class="border">
+    </aside>
+    <footer class="border">
+    &copy;Aditya all rights reserved.2023 
+    </footer>
+  </div>
+</body>
+</html>

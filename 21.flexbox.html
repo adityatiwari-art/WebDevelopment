@@ -1,0 +1,141 @@
+<!-- flexbox are used for positioning of items in a row or coloums it is a one dimensional positioning method
+flexible box
+flex container
+-------------------------------------------- ^ cross start 
+|                                          | |
+|                                          | |
+|                                          | |
+|       flex item1   flex item2....        | |cross axis
+|                                          | |
+|size and cross size of items are          | |
+| width and height of item                 | |
+|------------------------------------------| |  cross end
+main start                            main end 
+<----------------main axis----------------->             
+       <!-- /* Initialize the container as a flex box */
+            display:flex;
+            /* Flex properties for a flex container */
+
+            /* flex-direction: row; (Default value of flex-direction is row) */
+            /* flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse; */
+            
+
+            /* flex-wrap: wrap; (Default value of flex-direction is no-wrap) */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-flow: row-reverse wrap; */ 
+            /* justify-content will justify the content in horizontal direction */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+
+            /* align-items will justify the content in vertical direction */
+            /* align-items: center; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+            /* align-items: stretch; */ 
+        
+        
+            /* Flex properties for a flex item */
+            /* Higher the order, later it shows up in the container */
+            /* order: 2; */
+
+            /* flex-grow: 2;
+            flex-shrink: 2; */
+
+       
+            /* flex-grow: 3;
+            flex-shrink: 3 ; */
+            /* flex-basis: 160px; */
+            /* when flex-direction is set to row flex-basis: will control width */
+            /* when flex-direction is set to column flex-basis: will control height */
+        }
+       
+            /* flex: 2 2 230px; */
+            /* align-self: flex-start;
+            align-self: flex-end;
+            align-self: center; */
+
+           -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox  in css</title>
+  <style>
+    .container{
+      border: 2px solid black;
+      height: 1100px;
+      width:1100px;
+      margin: auto; 
+        /* in block elements with width the remaining space is margin and for margin auto you need that right space */
+        /* since container flex property hence in container  */
+        display: flex;
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+        /* flex-wrap: wrap; */
+
+                                    /*5
+        flex-wrap: wrap-reverse;      1 2 3 4*/
+        /* flex-flow: column wrap-reverse; */
+
+        /* justify-content */
+        /* justify-content: center;  /* horizontally center */
+        /* justify-content: flex-end; */  /*horizontal end or main end*/
+        /* justify-content: flex-start; */  /*horizontal start or main start */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+        /* justify-content: space-evenly; */
+
+        /* align-items */
+        /* align-items: center;   */  /*vertically center */
+        /* align-items: flex-end; */ /*vertical end or cross end*/
+        /* align-items: flex-start; */ /*vertical start or cross start*/
+        flex-wrap: wrap;
+        /* align-items:stretch;*/ /*even verticle space */
+    }
+  .items{
+    border: 2px solid rgb(245, 3, 43);
+    height:150px;
+    margin: 10px;
+    background-color: tomato;
+    width: 135px;
+    /* flex items properties  */
+    
+
+  }
+  #flexitems1{
+    order: 1;     /*  lesser order will come forward*/
+    flex-grow:10;   /*used to set size growth in main axis more growth when the container grows*/  /*by default it is zero means no growth.flex-grow signifies the proportion of available space that the flex item should occupy in relation to other flex items with different flex-grow values.*/
+    flex-shrink: 6;/*starts working in minimum space remained condition*/
+    }
+  #flexitems2{
+    order: 6;
+    /* align-self:center;*/ /*  to align a single item in vertical axis or cross axis */
+    /* align-self: flex-start;
+    align-self: flex-end; */
+    /* flex-basis:400px; *//*in flex direction row it is used to set width same as width: 400px; */
+    flex:10 10 400px;  /*shorthand for flex grow shrink and flex basis at a time*/
+    
+    }
+  #flexitems3{
+    order: 8;
+    }
+  #flexitems4{
+    order: 9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="flexitems1" class="items">1</div>
+    <div id="flexitems2" class="items">2</div>
+    <div id="flexitems3" class="items">3</div>
+    <div id="flexitems4" class="items">4</div>
+    <div id="flexitems5" class="items">5</div>
+  </div>
+</body>
+</html>

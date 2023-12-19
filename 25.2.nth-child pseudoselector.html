@@ -1,0 +1,54 @@
+<!-- in nth child the counting of child in a container is general and after that it is checked that the given child is that selecctor or not as specified in this code  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2nd way to define nth-child pseudo-selector</title>
+  <style>
+  .root{
+  --bordering:2px solid black;
+  }
+  .container{
+    display: flex;
+    border: var(--bordering);
+    width:400px;
+    height:400px;
+    background-color: lavender;
+  }
+  .items{
+    height:20%;
+    width: 200px;
+    border:2px solid black;
+  }
+  /* 
+:first-child: Selects the first child element of its parent.
+:last-child: Selects the last child element of its parent.
+:nth-child(n): Selects the nth child element of its parent, where "n" is a number or an expression.
+:nth-last-child(n): Selects the nth child element of its parent, counting from the last child. 
+*/
+  .items:first-child{
+    background-color: blueviolet;
+  }
+  .items:nth-last-child(2){
+    background-color: blueviolet;
+  }
+  p:nth-child(1){  
+   /*1st child is container but it is not p*/
+   font-size: 60px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="items">items1</div>
+  <div class="items">items2</div>
+  <div class="items">items3</div>
+  <div class="items">items4</div>
+  <div class="items">items5</div>
+  </div>
+  <p>1</p>
+  <p>2</p>
+  <p>3lorem</p>
+</body>
+</html>

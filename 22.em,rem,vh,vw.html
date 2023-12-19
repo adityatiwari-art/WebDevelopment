@@ -1,0 +1,48 @@
+<!-- two more units vmin and vmax
+vmin<=>vh or vw as per the value of min. in desktop min is h and in phone min is w
+vmax<=>vh or vw as per the value of max. in desktop max is w and in phone max is h -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive web units</title>
+  <style>
+    body{
+      margin: 0px;
+      padding: 0px;
+    }
+    html{
+      font-size: 20px;
+      /* by default 16px */
+    }
+    .container{
+     
+      border: 2px solid black;
+      height: 100vh;   /*100% of verticle height of browser */
+      width: 100vw;    /*100% of horizontal width of browser */
+      font-size: 18px;  /*if not written then 16 px/*
+    }
+    .items{
+      border: 2px solid red;
+    }
+    #item1{
+      font-size: 3em;   /*em is that times of parent font size there 18*2=36px*/
+      padding: 2em;    /*padding is refering to the fontsize so 2*48=96px*/
+    }
+    #item2{
+      font-size: 6rem;   /*rem sizes wrt the html or root element  font size*/
+    }
+
+  </style>
+</head>
+<body>
+ <div class="container">
+  this is text one
+  <h1  class="items" id="item1">this is first</h1>
+  <h1  class="items" id="item2">this is space-around</h1>
+  <h1  class="items" id="item3">this is third</h1>
+  <h1  class="items" id="item4">this is forth</h1>
+ </div>
+</body>
+</html>

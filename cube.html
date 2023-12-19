@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D-cube</title>
+
+    <style>
+      .items {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background: linear-gradient(rgb(43, 239, 43), rgb(36, 33, 33));
+      }
+      .container {
+        height: 100vh;
+        margin: 400px;
+        position: relative;
+        transf;
+      }
+      .relative {
+        position: relative;
+      }
+      .front {
+        transform: rotateY(40deg);
+        transform: translateY(100px);
+      }
+      .back { 
+        transform: translateZ(-100px);
+        transform: rotateY(40deg);
+
+        /* top: -100px; */
+      }
+
+      .cube {
+        transform: rotateX(30deg);
+      }
+      .top
+      {
+        background-color:black;
+        transform: rotate(90deg);
+        transform: translateY(-100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container relative">
+      <div class="cube">
+        <div class="front items">front</div>
+        <div class="back items">back</div>
+        <div class="left items">left</div>
+        <div class="right
+        items">right</div>
+        <div class="top items">top</div>
+        <div class="bottom items">bottom</div>
+      </div>
+    </div>
+  </body>
+</html>

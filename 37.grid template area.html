@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid template area</title>
+  <style>
+.container{
+  display: grid;
+  grid-template-areas: 
+  'navbar navbar navbar navbar'
+  'section section section aside'
+  'footer footer footer footer';
+  grid-gap: 10px;
+}
+.items{
+  border: 2px solid black;
+}
+.navbar{
+  grid-area: navbar;
+}
+.section{
+grid-area: section;
+}
+.footer{
+grid-area: footer;
+}
+.aside{
+grid-area: aside;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="items navbar">Home contact us More</div>
+    <div class="items section ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorem, voluptas iste praesentium alias nam labore cumque. Corrupti, eveniet quos eos unde, quis numquam est necessitatibus dolorem quasi, qui ea?</div>
+    <div class="items aside ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit explicabo quasi minus dicta sit quod ullam, deleniti temporibus, incidunt fuga nam facere facilis.</div>
+    <div class="items footer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, nisi.</div>
+  </div>
+</body>
+</html>

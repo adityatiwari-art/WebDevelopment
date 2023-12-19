@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>border animation</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    .container{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(17, 17, 50);
+    }
+    .box
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+      width: 20%;
+      position: absolute;
+      background-color: rgb(23, 23, 95);
+      border-radius: 15px;
+      overflow:hidden;
+    }
+    .box::before{
+      content:'';
+      height: 500px;
+      background: linear-gradient(rgb(49, 155, 232), rgb(255, 44, 255));
+      width: 150px;
+      position:absolute;
+      animation-name: rotate;
+      animation-iteration-count: infinite;
+      animation-duration: 5s;
+      animation-timing-function: linear; 
+     }
+     .box::after{
+      content: '2';
+      font-size: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: rgb(23, 23, 95);
+      height:98%;
+      width:98% ;
+      /* border: 2px solid black; */
+      z-index: 6;
+      border-radius: 15px;
+     }
+    @keyframes rotate{
+      0%{
+      transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+  </div>
+</body>
+</html>

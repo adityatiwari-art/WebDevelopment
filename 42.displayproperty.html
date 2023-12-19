@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            background-color: forestgreen;
+            color: black;
+        }
+        .block{
+            width: 200px;/*yes*/
+            padding: 30px; /*yes*/
+            margin: 20px;
+            display:inline-block;
+            /* display: none;  removes the element with occupied space  */
+            /* visibility: hidden; removes the element without the occupied space*/
+        }
+        .inline{
+            width: 200px;  /*no*/
+            padding: 30px;/*yes*/
+            margin: 20px;/*only in x axis accepted*/
+            display: inline-block;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box block">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima deserunt culpa laborum necessitatibus beatae architecto quam magni laudantium expedita?\
+    </div>
+    <span class="box inline" >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta fugiat sunt perspiciatis sed architecto rem iure recusandae repellat reprehenderit amet!
+    </span>
+    
+</body>
+</html>
+<!-- inline-- height and width are adjusted as per the content and no explicit sizing,in same line
+ -->
+ <!-- block--starts on  new line,can be sized explicitly  -->
+ <!-- inline-block----has the property of both i.e it can be sized explicitly(block) and starts on the same line(inline) -->
+ <!-- display---none(khatam),inline,block,inline-block,grid,flex -->
+ <!-- visibility---hidden(hide/space occupied),visible-->

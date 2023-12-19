@@ -1,0 +1,30 @@
+<!-- ways to implement css in html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ways to implement css in html</title>
+    <!-- /*for way2: p stands for that same p tag */ -->
+    <!-- for way 3:  -->
+    <link rel="stylesheet" href="8.css" />
+    <style>
+      p {
+        color: rgb(0, 0, 0) !important;
+        /* background-color: blueviolet; */
+        border-style: double;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Ways To Include CSS</h2>
+    <!-- way 1 inline CSS  -->
+    <!-- <p style="color:rgb(77, 146, 9);background-color: black;">This is the first way to include css in html </p> -->
+    <!-- way 2 internal css  -->
+    <!-- remember inline css is considered more imp than internal so if two different qualitiesare there one in inline and one in internal css of same property then inline property will be  applied to it so upper line is commented out -->
+    <!-- <p>2nd way to include css using internal css so head tag is used in it</p> -->
+    <!-- way 3 to link style sheet(external link) in head -->
+    <p>this is the 3rd way to include css file external link</p>
+  </body>
+</html>

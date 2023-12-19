@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition in CSS</title>
+  <style>
+    .box{
+      height: 200px;
+      width: 200px;
+      background-color: blueviolet;
+      font-size: larger;
+      transition: width;  /*it means any change in width is smooth */
+      transition-duration: 4s;
+      transition-delay: 1s;
+      transition-timing-function: ease-in-out;
+    }
+    .box2{
+      height: 200px;
+      width: 200px;
+      background-color: blueviolet;
+      font-size: larger;
+      /* "all" means it is for all properties */
+      transition: all;  /*it means any change in width is smooth*/
+      transition-duration: 4s;
+      transition-delay: 1s;
+      transition-timing-function: ease-in-out;
+      /* transition:width 2s ease 1s; */
+    }
+    .box:hover{
+      width: 700px;
+      height: 700px;  /*it will be sudden due to no transition*/
+    }
+    .box2:hover:hover{
+      width: 700px;
+      height: 700px;  /*it will be sudden due to no transition*/
+      background-color: brown;
+    }
+  </style>
+</head>
+<body>
+  Just like animation but transition is for continuous properties like width height color not for discrete value property thats why its transition is controlled
+  <div class="box">this is a box</div>
+  <div class="box2">this is a box</div>
+</body>
+</html>

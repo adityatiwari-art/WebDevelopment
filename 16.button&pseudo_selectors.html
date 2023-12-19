@@ -1,0 +1,64 @@
+<!-- buttons and pseudo sleectors in html(not of css)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button and pseudo selectors</title>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  <style>
+  .container{
+    border:2px rgb(147, 147, 217);
+    border-style:double;
+    padding: 4px 10px;
+    margin:34px auto;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    background-color: rgb(158, 134, 181);
+    font-size: 25px;
+    width:900px;
+    box-sizing: border-box;
+  }
+  .btn{
+    border: none;
+    background-color: rgb(221, 51, 187);
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-size: 20px;
+    /* there is nothing like x-margin  and x-padding in css */
+    margin:6px 10px;
+    /* border: none;     for no border*/
+    cursor:pointer;     /*to set finger pointer in both the options read more and contact us since anchor tag has by default  pointer cursor but button doesnot*/
+    border-radius: 5px;
+    /* text-decoration: none; to remove underline or any text decorattion property */
+  }
+  .btn:hover{
+    background-color: rgb(218, 124, 237,0.4);  /*transparency also setted*/
+    color:rgb(125, 237, 125);
+  }
+  /* these are known as pseudo selectors(active,hover,visited ) */
+  a:hover{
+    color:rgb(125, 237, 125);
+  }
+  a:visited{
+    color: black;     /*once the read more is visited it will become black in font*/
+  }
+  a:active{
+    background-color: blue;    /*when clicked then color will change in hover it was when hovered it changed but here when clicked it will change*/
+  }
+  </style>
+</head>
+<body>
+  <div id="cont1" class="container" >
+    <h2>
+      <u>Aditya Birla Group</u>
+    </h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi quis minus soluta eligendi consequatur molestiae illum fuga optio porro reprehenderit numquam quos similique vero perspiciatis voluptate dolorum tenetur enim dolore, est odio animi inventore quod ut. Aliquid perspiciatis voluptatum commodi velit similique recusandae, fugiat temporibus unde rerum quidem laboriosam perferendis ipsa reprehenderit quisquam eos obcaecati laudantium praesentium at. Nobis, eum. <br>
+      <a href="https://google.com" class="rm">Read more</a><button class="btn">Contact us</button> <!--read more is hyperlink-->
+    </p>
+  </div>
+</body>
+</html>

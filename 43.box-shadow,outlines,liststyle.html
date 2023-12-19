@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* border: 2px solid red; */
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            /* box-shadow: hori verti blur spread color offset(andar ya barhar box ke shadow); */
+            box-shadow: -5px -5px 20px -2px blue ;
+            text-shadow: 2px 2px 5px red; /*hori verti blur color*/
+            outline: 2px solid black;
+            /* outline-offset: 20px; */
+
+        }
+        nav ul li{
+            list-style: devanagari;/*none for navbar*/
+            background-color: yellow;/*list style is not included inside the li*/
+            list-style-position: inside;/*used to put list style inside the li so background color can be applied to it also*/
+            /* list-style-image: url("McLaren-750S-1.jpg" ); */
+             list-style-type:"😂";/* window +v for emoji*/
+            /* list-style: url() inside or disc inside; */
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>home</li>
+            <li>contact us</li>
+            <li>help</li>
+            <li>feedback</li>
+        </ul>
+    </nav>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam officia odit deserunt laborum mollitia dolore minima fugit temporibus assumenda facere.</div>
+</body>
+</html>
+
+<!-- ouline vs border---outline doesnt take extra sapce and is the part of the box model whereas border takes extra space otherwise same -->
+<!-- ouline offset--to move outline as per your choice otherwise n extra space taken 
+ouline follows border radius property to be curvy-->
